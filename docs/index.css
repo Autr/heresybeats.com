@@ -1,0 +1,139 @@
+
+	:root {
+		--fg: #333;
+		--bg: #f9f9f9;
+		--dip: #777;
+		--fade: #aaa;
+	}
+
+	@font-face {
+	    font-family: "AeonikPro";
+	    src: url("AeonikProRegular.woff2") format("woff2");
+	    font-weight: 400; /* Standard weight */
+	    font-style: normal;
+	    font-display: swap;
+	}
+	@font-face {
+	    font-family: "AeonikPro";
+	    src: url("AeonikProMedium.woff2") format("woff2");
+	    font-weight: 500; /* Medium weight */
+	    font-style: normal;
+	    font-display: swap;
+	}
+	@font-face {
+	    font-family: "AeonikPro";
+	    src: url("AeonikProBold.woff2") format("woff2");
+	    font-weight: 700; /* Bold weight */
+	    font-style: normal;
+	    font-display: swap;
+	}
+
+	a, a:visited, a:hover, a:active {
+		color: var(--fg);
+		text-decoration: none;
+	}
+
+	h1,h2,h3,h4,h5,h6, * {
+		font-size: 1em;
+		font-weight: normal;
+		padding: 0;
+		margin: 0;
+	}
+
+	/* ========= HTML ========= */
+
+	html, body {
+		font-family: 'AeonikPro', sans-serif;
+		color: var(--fg);
+		background: var(--bg);
+		font-size: 18px;
+	}
+	* {
+		line-height: 1.2em;
+	}
+
+	/* ========= HEADER ========= */
+
+	header h1 {
+		margin: 1.682em;
+		overflow: hidden;
+		/*mix-blend-mode: multiply;*/
+	}
+	header h1 span {
+		position: absolute;
+		left: -9999px;
+		top: -9999px;
+	}
+
+	header .desc {
+		color: var(--fade);
+	}
+
+	/* ========= MAIN ========= */
+
+	main {
+		margin: 0 auto;
+		width: 420px;
+		text-align: center;
+	}
+
+	.release header {
+		margin: 1.682em 0em;
+	}
+
+	.meta {
+		margin-top: 0.682em;
+	}
+
+	h2 span {
+		display: block;
+	}
+
+	.artist, .title {
+		display: block;
+	}
+
+	.id, .date, .sep {
+		color: var(--fade);
+		font-weight: 500;
+		text-transform: uppercase;
+		font-size: 0.682em;
+	}
+
+	.id {
+		color: var(--fg);
+	}
+
+	h2 {
+		font-size: calc(1.682em * 1);
+	}
+
+	.artist, .title {
+		font-weight: 700;
+	}
+
+	.release footer {
+		padding: 1.682em;
+		display: none;
+	}
+
+	.release footer svg {
+		width: 0.682em;
+		height: 0.682em;
+		opacity: 0.682;
+	}
+
+
+	/* ========= MAIN ========= */
+
+	footer {
+		margin: 1.682em 0;
+		font-size: 0.682em;
+		color: var(--fade);
+	}
+
+	footer a {
+		color: var(--fg);
+		font-weight: 700;
+	}
+

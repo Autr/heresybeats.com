@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>$websiteTitle</title>
+	<meta name="title" content="$websiteTitle">
+	<meta name="description" content="$websiteDesc">
+	<meta name="keywords" content="$websiteKeywords">
+	<meta name="robots" content="index, follow">
+	<meta name="language" content="English">
+	<meta name="author" content="$labelName">
+
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://heresybeats.com">
+	<meta property="og:title" content="$websiteTitle">
+	<meta property="og:description" content="$websiteDesc">
+	<meta property="og:image" content="https://heresybeats.com/og-image.jpg">
+
+	<meta property="twitter:card" content="summary_large_image">
+	<meta property="twitter:url" content="https://heresybeats.com">
+	<meta property="twitter:title" content="$websiteTitle">
+	<meta property="twitter:description" content="$websiteDesc">
+	<meta property="twitter:image" content="https://heresybeats.com/og-image.jpg">
+
+	<link rel="stylesheet" href="index.css">
+	<link rel="canonical" href="https://heresybeats.com">
+
+	<link rel="icon" type="image/png" href="/favicon.svg">
+
+	<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "MusicGroup",
+			"name": "$labelName",
+			"url": "https://heresybeats.com",
+			"logo": "https://heresybeats.com/heresy.png",
+			"sameAs": "$websiteLinks",
+			"description": "$websiteDesc",
+			"genre": "$websiteGenres"
+		}
+	</script>
+</head>
+<body>
+	<main>
+		<header>
+			<h1>
+				<span>$websiteTitle | $websiteDesc</span>
+				<img src="heresy.png" title="$websiteTitle | $websiteDesc">
+			</h1>
+			<!-- <p class="desc">$websiteDesc</p> -->
+		</header>
+		$websiteContent
+
+		<footer>
+			<a href="mailto:info@heresybeats.com">$websiteTitle</a>
+			<span>2013-$websiteYear</span>
+		</footer>
+	</main>
+
+</body>
+</html>
