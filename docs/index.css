@@ -2,28 +2,28 @@
 	:root {
 		--fg: #333;
 		--dark: #111;
-		--bg: #fefefe;
+		--bg: #f9f9f9;
 		--fade: #aaa;
 		--width: 520px;
 	}
 
 	@font-face {
 	    font-family: "AeonikPro";
-	    src: url("AeonikProRegular.woff2") format("woff2");
+	    src: url("/AeonikProRegular.woff2") format("woff2");
 	    font-weight: 400; /* Standard weight */
 	    font-style: normal;
 	    font-display: swap;
 	}
 	@font-face {
 	    font-family: "AeonikPro";
-	    src: url("AeonikProMedium.woff2") format("woff2");
+	    src: url("/AeonikProMedium.woff2") format("woff2");
 	    font-weight: 500; /* Medium weight */
 	    font-style: normal;
 	    font-display: swap;
 	}
 	@font-face {
 	    font-family: "AeonikPro";
-	    src: url("AeonikProBold.woff2") format("woff2");
+	    src: url("/AeonikProBold.woff2") format("woff2");
 	    font-weight: 700; /* Bold weight */
 	    font-style: normal;
 	    font-display: swap;

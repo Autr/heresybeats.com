@@ -5,6 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<title>$websiteTitle</title>
+	<meta http-equiv="Cache-Control" content="no-cache">
 	<meta name="title" content="$websiteTitle">
 	<meta name="description" content="$websiteDesc">
 	<meta name="keywords" content="$websiteKeywords">
@@ -19,15 +20,18 @@
 	<meta property="og:image" content="https://heresybeats.com/og-image.jpg">
 
 	<meta property="twitter:card" content="summary_large_image">
-	<meta property="twitter:url" content="https://heresybeats.com">
+	<meta property="twitter:url" content="https://heresybeats.com?$websiteDateString">
 	<meta property="twitter:title" content="$websiteTitle">
 	<meta property="twitter:description" content="$websiteDesc">
-	<meta property="twitter:image" content="https://heresybeats.com/og-image.jpg">
+	<meta property="twitter:image" content="https://heresybeats.com/heresy-beats-label.jpg?$websiteDateString">
 
-	<link rel="stylesheet" href="index.css">
+	<link rel="preload" href="/AeonikProRegular.woff2" as="font" type="font/woff2" crossorigin>
+	<link rel="preload" href="/AeonikProMedium.woff2" as="font" type="font/woff2" crossorigin>
+	<link rel="preload" href="/AeonikProBold.woff2"   as="font" type="font/woff2" crossorigin>
+	<link rel="stylesheet" rel="preconnect" href="index.css?$websiteDateString">
 	<link rel="canonical" href="https://heresybeats.com">
 
-	<link rel="icon" type="image/png" href="/favicon.svg">
+	<link rel="icon" rel="preconnect" type="image/png" href="/favicon.svg?$websiteDateString">
 
 	<script type="application/ld+json">
 		{
@@ -47,7 +51,7 @@
 		<header class="site-header" aria-label="site header">
 			<h1>
 				<span>$websiteTitle | $websiteDesc</span>
-				<img src="heresy.png" title="$websiteTitle | $websiteDesc">
+				<img fetchpriority="high" src="heresy.png" title="$websiteTitle | $websiteDesc">
 			</h1>
 			<!-- <p class="desc">$websiteDesc</p> -->
 		</header>

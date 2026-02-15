@@ -32,10 +32,9 @@ const config = {
 			console.log('NAME', name)
 			return `<li><a itemprop="sameAs" aria-label="${name}" href="${link}">${name}</a></li>`
 		}
-	}).join('\n') + '</ul>'
+	}).join('\n') + '</ul>',
+	websiteDateString: String(Number(new Date))
 
 }
-
-console.log(config)
 
 export default config

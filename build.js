@@ -10,6 +10,8 @@ const SITE = 'https://heresybeats.bandcamp.com'
 const embed = (item) => `
 	<div class="bandcamp-embed">
 		<iframe 
+			title="${item.artist} - ${item.title} player"
+			fetchpriority="high"
 			style="width:100%;height:9999px"
 			src="${item.embedUrl}" 
 			seamless>
