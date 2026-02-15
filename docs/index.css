@@ -1,9 +1,10 @@
 
 	:root {
 		--fg: #333;
-		--bg: #f9f9f9;
-		--dip: #777;
+		--dark: #111;
+		--bg: #fefefe;
 		--fade: #aaa;
+		--width: 520px;
 	}
 
 	@font-face {
@@ -38,34 +39,73 @@
 		font-weight: normal;
 		padding: 0;
 		margin: 0;
+		list-style-type: none;
+		font-style: normal;
 	}
 
 	/* ========= HTML ========= */
 
-	html, body {
+	html, body, main {
 		font-family: 'AeonikPro', sans-serif;
 		color: var(--fg);
 		background: var(--bg);
 		font-size: 18px;
+		padding: 0;
+		margin: 0;
 	}
 	* {
 		line-height: 1.2em;
+		padding: 0;
+		margin: 0;
+	}
+
+	/* ========= EMBEDS ========= */
+
+	.bandcamp-embed {
+		height: auto;
+		aspect-ratio: 1 / 1.45!important;
+		position: relative;
+		display: block;
+		overflow: hidden;
+		border-bottom: 1px solid rgba(0,0,0,0.1)
+	}
+	@media screen and (max-width: 600px) {
+		.bandcamp-embed {
+
+			aspect-ratio: 1 / 1.55!important;
+		}
+	}
+
+	.bandcamp-embed iframe {
+		width: 100%;
+		border: none;
 	}
 
 	/* ========= HEADER ========= */
 
-	header h1 {
-		margin: 1.682em;
-		overflow: hidden;
+	header.site-header {
+		display: block;
+		position: sticky;
+		top: 0px;
+		left: 0px;
+		display: block;
+		z-index: 0;
+	}
+
+	header.site-header h1 {
+		overflow: clip;
 		/*mix-blend-mode: multiply;*/
 	}
-	header h1 span {
+	header.site-header h1 span {
 		position: absolute;
 		left: -9999px;
 		top: -9999px;
 	}
+	header.site-header h1 img {
+		margin: 1.682em;
+	}
 
-	header .desc {
+	header.site-header .desc {
 		color: var(--fade);
 	}
 
@@ -73,12 +113,37 @@
 
 	main {
 		margin: 0 auto;
-		width: 420px;
+		max-width: var(--width);
 		text-align: center;
 	}
 
+	.release {
+		position: relative;
+		z-index: 1;
+	}
+
 	.release header {
-		margin: 1.682em 0em;
+		padding: calc(1.682em) 0em;
+		background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, var(--bg) 80%);
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	.release header h2 a {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	.release header h2 a:hover {
+
+		color: var(--dark);
+	}
+	.release header h2 a .title {
+		border-bottom: 3px solid var(--bg);
+		transition: all 0.2s ease;
+	}
+	.release header h2 a:hover .title {
+		border-bottom-color: var(--dark);
 	}
 
 	.meta {
@@ -102,6 +167,11 @@
 
 	.id {
 		color: var(--fg);
+		font-weight: 700;
+		transition: all 0.2s ease;
+	}
+	.id:hover {
+		color: var(--dark);
 	}
 
 	h2 {
@@ -126,13 +196,57 @@
 
 	/* ========= MAIN ========= */
 
-	footer {
-		margin: 1.682em 0;
+	footer.site-footer {
+		padding: 1.682em 0;
 		font-size: 0.682em;
 		color: var(--fade);
 	}
 
-	footer a {
+	footer.site-footer {
+		height: 100vh;
+		display: flex;
+		flex-direction: column;
+		justify-content: stretch;
+		align-items: stretch;
+
+	}
+	footer.site-footer ul {
+		display: flex;
+		flex-grow: 1;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	footer.site-footer ul li a {
+		display: block;
+		margin: 0.682em 0em;
+		font-weight: 500;
+		transform: rotate(16.82deg);
+		font-size: 1.682em;
+		color: var(--fade);
+		border-bottom: 2px solid transparent;
+	}
+
+	footer.site-footer ul li a {
+		color: var(--fade);
+		font-weight: 300;
+	}
+	footer.site-footer ul li a:hover {
+		color: var(--dark);
+	}
+	footer.site-footer ul li address a {
+		color: var(--fg);
+		font-weight: 700;
+		border-bottom: 2px solid var(--bg);
+	}
+	footer.site-footer ul li address a:hover {
+		border-bottom: 2px solid var(--fg);
+	}
+
+
+	footer.site-footer a {
+		transition: all 0.2s ease;
 		color: var(--fg);
 		font-weight: 700;
 	}

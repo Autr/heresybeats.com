@@ -8,12 +8,14 @@ import fs from 'fs'
 const SITE = 'https://heresybeats.bandcamp.com'
 
 const embed = (item) => `
-	<iframe 
-		style="border: 0; width: 420px; height: 660px;" 
-		src="${item.embedUrl}" 
-		seamless>
-		${item.artist} - ${item.title} (released ${item.date})
-	</iframe>`
+	<div class="bandcamp-embed">
+		<iframe 
+			style="width:100%;height:9999px"
+			src="${item.embedUrl}" 
+			seamless>
+			${item.artist} - ${item.title} (released ${item.date})
+		</iframe>
+	</div>`
 const template = (item) => {
 	const isoDate = new Date(item.date).toISOString().split('T')[0]
 	
@@ -31,7 +33,7 @@ const template = (item) => {
 			</h2>
 
 			<div class="meta">
-				<span class="id" itemprop="identifier">${item.labelId}</span>
+				<a class="id" href="${item.url}" itemprop="identifier">${item.labelId}</a>
 				<span class="sep">/</span>
 				<time class="date" itemprop="datePublished" datetime="${isoDate}" >${item.date}</time>
 			</div>
@@ -50,16 +52,12 @@ const template = (item) => {
 }
 const run = async () => {
 
-	SAY(meta)
-
 	let outputHtml = fs.readFileSync('./template.html', { encoding: 'utf8' })
 
 	for (const [id,value] of Object.entries(meta)) {
 		outputHtml = outputHtml.replaceAll(`"$${id}"`, JSON.stringify(value))
 		outputHtml = outputHtml.replaceAll(`$${id}`, value)
 	}
-
-	SAY(outputHtml)
 
 	const res = await fetch(`${SITE}/music`)
 	const html = await res.text()

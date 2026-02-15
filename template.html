@@ -44,7 +44,7 @@
 </head>
 <body>
 	<main>
-		<header>
+		<header class="site-header" aria-label="site header">
 			<h1>
 				<span>$websiteTitle | $websiteDesc</span>
 				<img src="heresy.png" title="$websiteTitle | $websiteDesc">
@@ -53,9 +53,12 @@
 		</header>
 		$websiteContent
 
-		<footer>
-			<a href="mailto:info@heresybeats.com">$websiteTitle</a>
-			<span>2013-$websiteYear</span>
+		<footer class="site-footer" aria-label="site footer">
+			$websiteFooterLinks
+			<address>
+				<a href="mailto:info@heresybeats.com">$websiteTitle</a>
+				<span>2013-$websiteYear</span>
+			</address>
 		</footer>
 	</main>
 
